@@ -5,11 +5,16 @@
         <title>Consulta Restaurantes</title>
         <meta charset="utf-8"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <style>
+        <style>    
+            @font-face{
+                font-family: Paprika;
+                src: url(css/Paprika-Regular.ttf);
+            }
             *{
                 margin: 0;
                 padding: 0;
             }
+            
             html{
                 margin: 0;
                 padding: 0;
@@ -22,6 +27,8 @@
                 padding: 0;
                 width: 100%;
                 height: 100%;
+                
+                font-family: Paprika;
             }
 
             body header{
@@ -36,6 +43,8 @@
                 height: 100%;
                 margin: 0;
                 padding: 0;
+                font-weight: bold;
+                font-size: 20px;
 
                 display: flex;
                 flex-direction: row;
@@ -134,10 +143,10 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="index.jsp"><img alt="logo" src="..."/>NOME SITE</a></li>
-                    <li><a href="index.jsp">INICIO</a></li>
-                    <li><a href="signup.jsp">REGISTRAR-SE</a></li>
-                    <li><a href="signin.jsp">LOGIN</a></li>
+                    <li><a href="index.jsp"><img alt="logo" src="..."/>BRConsulta</a></li>
+                    <li><a href="index.jsp">inicio</a></li>
+                    <li><a href="signup.jsp">registrar-se</a></li>
+                    <li><a href="signin.jsp">login</a></li>
                 </ul>
             </nav>
         </header>
