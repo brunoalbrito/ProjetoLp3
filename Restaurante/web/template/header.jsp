@@ -5,11 +5,16 @@
         <title>Consulta Restaurantes</title>
         <meta charset="utf-8"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <style>
+        <style>    
+            @font-face{
+                font-family: Paprika;
+                src: url(css/Paprika-Regular.ttf);
+            }
             *{
                 margin: 0;
                 padding: 0;
             }
+            
             html{
                 margin: 0;
                 padding: 0;
@@ -22,13 +27,15 @@
                 padding: 0;
                 width: 100%;
                 height: 100%;
+                
+                font-family: Paprika;
             }
 
             body header{
                 width: 100%;
                 height: 5%;
                 position: fixed;
-                background-color: lawngreen;
+                background-color: rgb(13,255,0);
             }
 
             body header nav{
@@ -36,6 +43,9 @@
                 height: 100%;
                 margin: 0;
                 padding: 0;
+                font-weight: bold;
+                font-size: 20px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
 
                 display: flex;
                 flex-direction: row;
@@ -62,6 +72,7 @@
                 padding: 0;
                 width: 20%;
                 height: 100%;
+                color: #FFF;
 
                 display: flex;
                 flex-direction: row;
@@ -69,10 +80,20 @@
                 align-items: center;
                 flex-basis: auto;
             }
-
+            
+            body header ul li:nth-child(1){
+                background-color: rgba(9,181,29,0.4);
+            }
+            
+            body header ul li:nth-child(4) a{
+                padding: 1px 50px;
+                border: 2px solid #fff;
+                border-radius: 5px;
+            }
+            
             body header ul li a, a:active, a:visited{
                 text-decoration: none;
-                color: #000;
+                color: #fff;
                 display: inline-block;
             }
 
@@ -99,16 +120,26 @@
             }
 
             body header ul li:hover a{
-                color: lawngreen;
+                color: rgb(13,255,0);
                 transition-duration: 0.7s;
             }
 
             body header ul li:nth-child(1):hover{
-                background-color: lawngreen;
+                background-color: rgba(9,181,29,0.4);
+            }
+            
+            body header ul li:nth-child(4):hover{
+                background-color: rgb(13,255,0);
+            }
+            
+            body header ul li:nth-child(4) a:hover{
+                color: rgb(13,255,0);
+                background-color: #fff;
+                transition-duration: 0.7s;
             }
 
             body header ul li:nth-child(1):hover a{
-                color: #000;
+                color: #fff;
                 transition-duration: 0s;
             }
 
@@ -120,8 +151,7 @@
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-
-                background-color: lawngreen;
+                background-color: rgb(13,255,0);
             }
             
             body footer a, body footer a:active, body footer a:visited{
@@ -134,10 +164,10 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="index.jsp"><img alt="logo" src="..."/>NOME SITE</a></li>
-                    <li><a href="index.jsp">INICIO</a></li>
-                    <li><a href="signup.jsp">REGISTRAR-SE</a></li>
-                    <li><a href="signin.jsp">LOGIN</a></li>
+                    <li><a href="index.jsp"><img alt="logo" src="..."/>BRConsulta</a></li>
+                    <li><a href="index.jsp">inicio</a></li>
+                    <li><a href="signup.jsp">registrar-se</a></li>
+                    <li><a href="signin.jsp">login</a></li>
                 </ul>
             </nav>
         </header>
