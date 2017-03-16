@@ -43,7 +43,7 @@
                 height: 100%;
                 margin: 0;
                 padding: 0;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0px 10px rgba(0, 0, 0, 0.19);
 
                 display: flex;
                 flex-direction: row;
@@ -89,7 +89,7 @@
                 border-radius: 5px;
             }
             
-            body header nav ul li a, a:active, a:visited{
+            body header nav ul li a,body header nav ul li a:active,body header nav ul li a:visited{
                 text-decoration: none;
                 color: #fff;
                 display: inline-block;
