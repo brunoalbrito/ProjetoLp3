@@ -35,7 +35,7 @@
                 width: 100%;
                 height: 5%;
                 position: fixed;
-                background-color: lawngreen;
+                background-color: rgb(13,255,0);
             }
 
             body header nav{
@@ -45,6 +45,7 @@
                 padding: 0;
                 font-weight: bold;
                 font-size: 20px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
 
                 display: flex;
                 flex-direction: row;
@@ -71,6 +72,7 @@
                 padding: 0;
                 width: 20%;
                 height: 100%;
+                color: #FFF;
 
                 display: flex;
                 flex-direction: row;
@@ -78,10 +80,20 @@
                 align-items: center;
                 flex-basis: auto;
             }
-
+            
+            body header ul li:nth-child(1){
+                background-color: rgba(9,181,29,0.4);
+            }
+            
+            body header ul li:nth-child(4) a{
+                padding: 1px 50px;
+                border: 2px solid #fff;
+                border-radius: 5px;
+            }
+            
             body header ul li a, a:active, a:visited{
                 text-decoration: none;
-                color: #000;
+                color: #fff;
                 display: inline-block;
             }
 
@@ -108,16 +120,26 @@
             }
 
             body header ul li:hover a{
-                color: lawngreen;
+                color: rgb(13,255,0);
                 transition-duration: 0.7s;
             }
 
             body header ul li:nth-child(1):hover{
-                background-color: lawngreen;
+                background-color: rgba(9,181,29,0.4);
+            }
+            
+            body header ul li:nth-child(4):hover{
+                background-color: rgb(13,255,0);
+            }
+            
+            body header ul li:nth-child(4) a:hover{
+                color: rgb(13,255,0);
+                background-color: #fff;
+                transition-duration: 0.7s;
             }
 
             body header ul li:nth-child(1):hover a{
-                color: #000;
+                color: #fff;
                 transition-duration: 0s;
             }
 
@@ -129,8 +151,7 @@
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-
-                background-color: lawngreen;
+                background-color: rgb(13,255,0);
             }
             
             body footer a, body footer a:active, body footer a:visited{
