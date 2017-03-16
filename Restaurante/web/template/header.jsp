@@ -84,7 +84,7 @@
             }
             
             body header nav ul li:nth-child(4) a{
-                padding: 1px 50px;
+                padding: 2% 20%;
                 border: 2px solid #fff;
                 border-radius: 5px;
             }
@@ -130,6 +130,10 @@
                 background-color: rgb(13,255,0);
             }
             
+            body header nav ul li:nth-child(4):hover a{
+                color: #fff;
+            }
+            
             body header nav ul li:nth-child(4) a:hover{
                 color: rgb(13,255,0);
                 background-color: #fff;
@@ -152,9 +156,14 @@
                 background-color: rgb(13,255,0);
             }
             
-            body footer a, body footer a:active, body footer a:visited{
+            body footer a{
+                color: #fff;
+                font-size: 14px;
+            }
+            
+            body footer a:active, body footer a:visited{
                 text-decoration: none;
-                color: #000;
+                color: #fff;
             }
         </style>
     </head>
