@@ -27,15 +27,15 @@
                 <h1>Principais Funcionalidades: </h1>
                 <figure>
                     <div>
-                        <img src="" alt="Ícone de busca">
+                        <img src="images/search.ico" alt="Ícone de busca">
                         <figcaption>Busca de Restaurantes</figcaption>
                     </div>
                     <div>
-                        <img src="" alt="Ícone de fotos">
+                        <img src="images/gallery.png" alt="Ícone de fotos">
                         <figcaption>Galeria de Fotos de Restaurantes</figcaption>                  
                     </div>
                     <div>
-                        <img src="" alt="Ícone de favorito">
+                        <img src="images/favorite.png" alt="Ícone de favorito">
                         <figcaption>Lista de Restaurantes Favoritos</figcaption>                    
                     </div>
                 </figure>

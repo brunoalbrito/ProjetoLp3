@@ -33,7 +33,7 @@
 
             body header{
                 width: 100%;
-                height: 5%;
+                height: 7.5%;
                 position: fixed;
                 background-color: rgb(13,255,0);
             }
@@ -43,9 +43,7 @@
                 height: 100%;
                 margin: 0;
                 padding: 0;
-                font-weight: bold;
-                font-size: 20px;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0px 10px rgba(0, 0, 0, 0.19);
 
                 display: flex;
                 flex-direction: row;
@@ -53,7 +51,7 @@
                 align-items: center;
             }
 
-            body header ul{
+            body header nav ul{
                 width: 80%;
                 height: 100%;
                 margin: 0;
@@ -67,7 +65,7 @@
                 align-items: center;
             }
 
-            body header ul li{
+            body header nav ul li{
                 margin: 0;
                 padding: 0;
                 width: 20%;
@@ -81,23 +79,23 @@
                 flex-basis: auto;
             }
             
-            body header ul li:nth-child(1){
+            body header nav ul li:nth-child(1){
                 background-color: rgba(9,181,29,0.4);
             }
             
-            body header ul li:nth-child(4) a{
-                padding: 1px 50px;
+            body header nav ul li:nth-child(4) a{
+                padding: 2% 20%;
                 border: 2px solid #fff;
                 border-radius: 5px;
             }
             
-            body header ul li a, a:active, a:visited{
+            body header nav ul li a,body header nav ul li a:active,body header nav ul li a:visited{
                 text-decoration: none;
                 color: #fff;
                 display: inline-block;
             }
 
-            body header ul li:nth-child(1) a{
+            body header nav ul li:nth-child(1) a{
                 width: 100%;
                 height: 100%;
 
@@ -108,37 +106,41 @@
                 align-items: center;
             }
 
-            body header ul li:nth-child(1) a img{
+            body header nav ul li:nth-child(1) a img{
                 margin: 0;
                 padding: 0;
                 display: flex;
             }
 
-            body header ul li:hover{
+            body header nav ul li:hover{
                 background-color: #fff;
                 transition-duration: 0.7s;
             }
 
-            body header ul li:hover a{
+            body header nav ul li:hover a{
                 color: rgb(13,255,0);
                 transition-duration: 0.7s;
             }
 
-            body header ul li:nth-child(1):hover{
+            body header nav ul li:nth-child(1):hover{
                 background-color: rgba(9,181,29,0.4);
             }
             
-            body header ul li:nth-child(4):hover{
+            body header nav ul li:nth-child(4):hover{
                 background-color: rgb(13,255,0);
             }
             
-            body header ul li:nth-child(4) a:hover{
+            body header nav ul li:nth-child(4):hover a{
+                color: #fff;
+            }
+            
+            body header nav ul li:nth-child(4) a:hover{
                 color: rgb(13,255,0);
                 background-color: #fff;
                 transition-duration: 0.7s;
             }
 
-            body header ul li:nth-child(1):hover a{
+            body header nav ul li:nth-child(1):hover a{
                 color: #fff;
                 transition-duration: 0s;
             }
@@ -154,9 +156,14 @@
                 background-color: rgb(13,255,0);
             }
             
-            body footer a, body footer a:active, body footer a:visited{
+            body footer a{
+                color: #fff;
+                font-size: 14px;
+            }
+            
+            body footer a:active, body footer a:visited{
                 text-decoration: none;
-                color: #000;
+                color: #fff;
             }
         </style>
     </head>
