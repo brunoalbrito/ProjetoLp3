@@ -3,7 +3,7 @@
 <c:import url="/template/header.jsp"/>
 <link href="css/signup_style.css" rel="stylesheet" type="text/css"/>
 <main>
-    <form method="post" action="">
+    <form action="FrontController" method="POST">
         <label for="nome_completo">Nome Completo: </label>
         <input type="text" required="required" id="nome_completo" name="nome_completo">
 
@@ -21,6 +21,8 @@
 
         <label for="conf_senha">Confirmarção de Senha: </label>
         <input type="password" required="required" id="conf_senha" name="conf_senha">
+
+        <input type="hidden" name="ctrl" value="Cadastro"/>
 
         <input type="submit" value="REGISTRAR">
     </form>
