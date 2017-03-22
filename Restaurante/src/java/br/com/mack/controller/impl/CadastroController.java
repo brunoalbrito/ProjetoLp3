@@ -6,8 +6,8 @@
 package br.com.mack.controller.impl;
 
 import br.com.mack.controller.AbstractController;
-import br.com.mack.persistence.UserRestDAO;
-import br.com.mack.persistence.entities.UserRest;
+import br.com.mack.persistence.UserDAO;
+import br.com.mack.persistence.entities.User;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.naming.Context;
@@ -20,11 +20,11 @@ import javax.naming.NamingException;
  */
 public class CadastroController extends AbstractController {
 
-    UserRestDAO userRestDAO = lookupUserRestDAOBean();
+    UserDAO userRestDAO = lookupUserRestDAOBean();
 
     @Override
     public void execute() {
-        UserRest rest = new UserRest();
+        User rest = new User();
         rest.setFullName(request.getParameter("nome_completo"));
         rest.setBirthday(request.getParameter("dt_nasc"));
         rest.setEmail(request.getParameter("email"));
@@ -35,10 +35,10 @@ public class CadastroController extends AbstractController {
         this.returnPage = "sucesso.jsp";
     }
 
-    private UserRestDAO lookupUserRestDAOBean() {
+    private UserDAO lookupUserRestDAOBean() {
         try {
             Context c = new InitialContext();
-            return (UserRestDAO) c.lookup("java:global/Restaurante/UserRestDAO!br.com.mack.persistence.UserRestDAO");
+            return (UserDAO) c.lookup("java:global/Restaurante/UserRestDAO!br.com.mack.persistence.UserRestDAO");
         } catch (NamingException ne) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", ne);
             throw new RuntimeException(ne);

@@ -24,28 +24,36 @@ import javax.persistence.TemporalType;
  * @author Bruno
  */
 @Entity
-public class UserRest implements Serializable{
+public class User implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idUser;
+    private long id;
     private String fullName;
     
     @Temporal(TemporalType.DATE)
     private Date birthday;
     private String email;
-    private String user_rest;
+    private String user;
     private String password;
 
-    public UserRest() {
+    public User() {
     }
 
-    public long getIdUser() {
-        return idUser;
+    public User(String fullName, Date birthday, String email, String user, String password) {
+        this.fullName = fullName;
+        this.birthday = birthday;
+        this.email = email;
+        this.user = user;
+        this.password = password;
     }
 
-    public void setIdUser(long idUser) {
-        this.idUser = idUser;
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getFullName() {
@@ -65,7 +73,7 @@ public class UserRest implements Serializable{
         try {
             this.birthday = df.parse(birthday);
         } catch (ParseException ex) {
-            Logger.getLogger(UserRest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -78,11 +86,11 @@ public class UserRest implements Serializable{
     }
 
     public String getUser() {
-        return user_rest;
+        return user;
     }
 
     public void setUser(String user) {
-        this.user_rest = user;
+        this.user = user;
     }
 
     public String getPassword() {
@@ -95,7 +103,7 @@ public class UserRest implements Serializable{
 
     @Override
     public String toString() {
-        return "UserRest{" + "idUser=" + idUser + ", fullName=" + fullName + ", birthday=" + birthday + ", email=" + email + ", user=" + user_rest + ", password=" + password + '}';
+        return "UserRest{" + "idUser=" + id + ", fullName=" + fullName + ", birthday=" + birthday + ", email=" + email + ", user=" + user + ", password=" + password + '}';
     }
 
 }

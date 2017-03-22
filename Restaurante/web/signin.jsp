@@ -11,7 +11,7 @@
         <label for="senha">Senha: </label>
         <input type="password" required="required" id="senha" name="senha">
 
-        <input type="submit" value="REGISTRAR">
+        <input type="submit" value="LOGAR">
     </form>
 </main>
 
