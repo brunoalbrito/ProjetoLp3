@@ -32,7 +32,7 @@ public class UserDAO implements GenericDAO<User> {
 
     @Override
     public List<User> readAll() {
-        Query q = em.createQuery("SELECT u FROM UserRest u");
+        Query q = em.createQuery("SELECT u FROM User u");
         List<User> lista = q.getResultList();
         return lista;
     }

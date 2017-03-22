@@ -34,7 +34,15 @@ public class User implements Serializable{
     @Temporal(TemporalType.DATE)
     private Date birthday;
     private String email;
-    private String user;
+    private String userName;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
     private String password;
 
     public User() {
@@ -44,8 +52,13 @@ public class User implements Serializable{
         this.fullName = fullName;
         this.birthday = birthday;
         this.email = email;
-        this.user = user;
+        this.userName = user;
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" + "id=" + id + ", fullName=" + fullName + ", birthday=" + birthday + ", email=" + email + ", user=" + userName + ", password=" + password + '}';
     }
 
     public long getId() {
@@ -68,13 +81,8 @@ public class User implements Serializable{
         return birthday;
     }
 
-    public void setBirthday(String birthday) {
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        try {
-            this.birthday = df.parse(birthday);
-        } catch (ParseException ex) {
-            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
     public String getEmail() {
@@ -85,14 +93,6 @@ public class User implements Serializable{
         this.email = email;
     }
 
-    public String getUser() {
-        return user;
-    }
-
-    public void setUser(String user) {
-        this.user = user;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -100,10 +100,16 @@ public class User implements Serializable{
     public void setPassword(String password) {
         this.password = password;
     }
-
-    @Override
-    public String toString() {
-        return "UserRest{" + "idUser=" + id + ", fullName=" + fullName + ", birthday=" + birthday + ", email=" + email + ", user=" + user + ", password=" + password + '}';
+    
+    public void setBirthday(String birthday) {
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            this.birthday = df.parse(birthday);
+        } catch (ParseException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
+
+    
 
 }
