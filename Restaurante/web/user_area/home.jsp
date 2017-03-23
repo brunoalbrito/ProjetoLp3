@@ -8,6 +8,9 @@
             Visualizar detalhes de restaurante
                 Favoritar restaurante
                 Visualizar galeria de fotos de restaurante
+                </br>
+                </br>
+                ${usuario}
 </main>
 
 <c:import url="/template/footer.jsp"/>

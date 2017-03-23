@@ -24,16 +24,25 @@ public class CadastroController extends AbstractController {
 
     @Override
     public void execute() {
-        User rest = new User();
-        rest.setFullName(request.getParameter("nome_completo"));
-        rest.setBirthday(request.getParameter("dt_nasc"));
-        rest.setEmail(request.getParameter("email"));
-        rest.setUserName(request.getParameter("usuario"));
-        rest.setPassword(request.getParameter("senha"));
+        User user = new User();
+        user.setFullName(request.getParameter("nome_completo"));
+        user.setBirthday(request.getParameter("dt_nasc"));
+        user.setEmail(request.getParameter("email"));
+        user.setUserName(request.getParameter("usuario"));
+        user.setPassword(request.getParameter("senha"));
         
-        userDAO.create(rest);
-
-        this.returnPage = "sucesso.jsp";
+        /**
+         * 
+         */
+        try {
+            userDAO.create(user);
+            request.getSession().setAttribute("usuario", user);
+        } catch (Exception e) {
+            Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", e);
+            returnPage = "erro.jsp";
+            return;
+        }
+        this.returnPage = "user_area/home.jsp";
     }
 
     private UserDAO lookupUserDAOBean() {
