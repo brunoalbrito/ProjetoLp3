@@ -4,14 +4,16 @@
 <link href="css/signin_style.css" rel="stylesheet" type="text/css"/>
 
 <main>
-    <form method="post" action="">
+    <form method="post" action="FrontController">
         <label for="usuario">Nome de Usuário: </label>
         <input type="text" required="required" id="usuario" name="usuario">
 
         <label for="senha">Senha: </label>
         <input type="password" required="required" id="senha" name="senha">
-
-        <input type="submit" value="REGISTRAR">
+        
+        <input type="hidden" name="ctrl" value="Login"/>
+        
+        <input type="submit" value="LOGAR">
     </form>
 </main>
 

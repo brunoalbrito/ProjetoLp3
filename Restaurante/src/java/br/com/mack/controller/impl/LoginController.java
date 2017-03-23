@@ -8,6 +8,7 @@ package br.com.mack.controller.impl;
 import br.com.mack.controller.AbstractController;
 import br.com.mack.persistence.UserDAO;
 import br.com.mack.persistence.entities.User;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.naming.Context;
@@ -16,24 +17,27 @@ import javax.naming.NamingException;
 
 /**
  *
- * @author Bruno
+ * @author 31595472
  */
-public class CadastroController extends AbstractController {
-
+public class LoginController extends AbstractController{
     UserDAO userDAO = lookupUserDAOBean();
 
     @Override
     public void execute() {
-        User rest = new User();
-        rest.setFullName(request.getParameter("nome_completo"));
-        rest.setBirthday(request.getParameter("dt_nasc"));
-        rest.setEmail(request.getParameter("email"));
-        rest.setUserName(request.getParameter("usuario"));
-        rest.setPassword(request.getParameter("senha"));
+        String usuario = request.getParameter("usuario");
+        String senha = request.getParameter("senha");
         
-        userDAO.create(rest);
-
-        this.returnPage = "sucesso.jsp";
+        List<User> users = null;
+        
+        users = userDAO.readAll();
+        
+        for (User user : users) {
+            if(user.getUserName().equals(usuario) && user.getPassword().equals(senha)){
+                System.out.println(user);
+                break;
+            }
+        }
+        
     }
 
     private UserDAO lookupUserDAOBean() {
@@ -45,5 +49,5 @@ public class CadastroController extends AbstractController {
             throw new RuntimeException(ne);
         }
     }
-
+    
 }

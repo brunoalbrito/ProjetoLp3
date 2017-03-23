@@ -5,7 +5,7 @@
  */
 package br.com.mack.persistence;
 
-import br.com.mack.persistence.entities.UserRest;
+import br.com.mack.persistence.entities.User;
 import java.util.List;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateful;
@@ -20,35 +20,35 @@ import javax.persistence.Query;
  */
 @LocalBean
 @Stateful
-public class UserRestDAO implements GenericDAO<UserRest> {
+public class UserDAO implements GenericDAO<User> {
 
     @PersistenceContext(unitName = "RestaurantePU", type = PersistenceContextType.EXTENDED)
     private EntityManager em;
 
     @Override
-    public void create(UserRest e) {
+    public void create(User e) {
         em.persist(e);
     }
 
     @Override
-    public List<UserRest> readAll() {
-        Query q = em.createQuery("SELECT u FROM UserRest u");
-        List<UserRest> lista = q.getResultList();
+    public List<User> readAll() {
+        Query q = em.createQuery("SELECT u FROM User u");
+        List<User> lista = q.getResultList();
         return lista;
     }
 
     @Override
-    public UserRest readById(long id) {
-        return em.find(UserRest.class, id);
+    public User readById(long id) {
+        return em.find(User.class, id);
     }
 
     @Override
-    public void update(UserRest e) {
+    public void update(User e) {
         em.persist(e);
     }
 
     @Override
-    public void delete(UserRest e) {
+    public void delete(User e) {
         em.remove(em.merge(e));
     }
 

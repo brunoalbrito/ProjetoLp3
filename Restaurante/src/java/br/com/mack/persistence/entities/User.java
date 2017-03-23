@@ -24,28 +24,49 @@ import javax.persistence.TemporalType;
  * @author Bruno
  */
 @Entity
-public class UserRest implements Serializable{
+public class User implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idUser;
+    private long id;
     private String fullName;
     
     @Temporal(TemporalType.DATE)
     private Date birthday;
     private String email;
-    private String user_rest;
+    private String userName;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
     private String password;
 
-    public UserRest() {
+    public User() {
     }
 
-    public long getIdUser() {
-        return idUser;
+    public User(String fullName, Date birthday, String email, String user, String password) {
+        this.fullName = fullName;
+        this.birthday = birthday;
+        this.email = email;
+        this.userName = user;
+        this.password = password;
     }
 
-    public void setIdUser(long idUser) {
-        this.idUser = idUser;
+    @Override
+    public String toString() {
+        return "User{" + "id=" + id + ", fullName=" + fullName + ", birthday=" + birthday + ", email=" + email + ", user=" + userName + ", password=" + password + '}';
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getFullName() {
@@ -60,13 +81,8 @@ public class UserRest implements Serializable{
         return birthday;
     }
 
-    public void setBirthday(String birthday) {
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        try {
-            this.birthday = df.parse(birthday);
-        } catch (ParseException ex) {
-            Logger.getLogger(UserRest.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
     public String getEmail() {
@@ -77,14 +93,6 @@ public class UserRest implements Serializable{
         this.email = email;
     }
 
-    public String getUser() {
-        return user_rest;
-    }
-
-    public void setUser(String user) {
-        this.user_rest = user;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -92,10 +100,16 @@ public class UserRest implements Serializable{
     public void setPassword(String password) {
         this.password = password;
     }
-
-    @Override
-    public String toString() {
-        return "UserRest{" + "idUser=" + idUser + ", fullName=" + fullName + ", birthday=" + birthday + ", email=" + email + ", user=" + user_rest + ", password=" + password + '}';
+    
+    public void setBirthday(String birthday) {
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            this.birthday = df.parse(birthday);
+        } catch (ParseException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
+
+    
 
 }
