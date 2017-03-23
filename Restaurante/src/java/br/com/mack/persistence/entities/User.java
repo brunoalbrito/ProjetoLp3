@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -36,6 +37,7 @@ public class User implements Serializable{
     @Temporal(TemporalType.DATE)
     private Date birthday;
     private String email;
+    @Column(unique = true)
     private String userName;
 
     public String getUserName() {

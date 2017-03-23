@@ -1,18 +1,18 @@
-Thu Mar 23 08:46:25 BRT 2017 : Apache Derby Servidor de Rede - 10.10.2.0 - (1582446) iniciado e pronto para aceitar conexões na porta 1527 em {3}
+Thu Mar 23 11:28:37 BRT 2017 : Apache Derby Servidor de Rede - 10.10.2.0 - (1582446) iniciado e pronto para aceitar conexões na porta 1527 em {3}
 ----------------------------------------------------------------
-Thu Mar 23 08:46:25 BRT 2017:
- Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância a816c00e-015a-fafd-3c9a-00003d9c611f
+Thu Mar 23 11:28:43 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância a816c00e-015a-fb91-c018-00003d9c611f
 no diretório de banco de dados C:\Temp\ProjetoLp3\Restaurante\db\restaurante 
 
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_101-b13
-user.dir=C:\Program Files\glassfish-4.1.1\javadb
+user.dir=C:\glassfish\javadb
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
 derby.system.home=C:\Temp\ProjetoLp3\Restaurante\db
 Carregador de classe do banco de dados iniciado - derby.database.classpath=''
-Thu Mar 23 08:46:25 BRT 2017 Thread[DRDAConnThread_2,5,main] (XID = 1421), (SESSIONID = 0), (DATABASE = restaurante), (DRDAID = {1}), Cleanup action starting
+Thu Mar 23 11:28:46 BRT 2017 Thread[DRDAConnThread_2,5,main] (XID = 1421), (SESSIONID = 0), (DATABASE = restaurante), (DRDAID = {1}), Cleanup action starting
 java.sql.SQLNonTransientConnectionException: Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -62,8 +62,8 @@ java.sql.SQLException: Ocorreu uma falha de autenticação da conexão.  Motivo: Au
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 08:46:25 BRT 2017 Thread[DRDAConnThread_2,5,main] (DATABASE = restaurante), (DRDAID = {1}), Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
-Thu Mar 23 08:50:50 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
+Thu Mar 23 11:28:46 BRT 2017 Thread[DRDAConnThread_2,5,main] (DATABASE = restaurante), (DRDAID = {1}), Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
+Thu Mar 23 11:36:17 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -113,8 +113,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 08:50:50 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {19}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 08:55:50 BRT 2017 Thread[DRDAConnThread_10,5,main] Cleanup action starting
+Thu Mar 23 11:36:17 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {27}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:36:17 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -164,8 +164,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 08:55:50 BRT 2017 Thread[DRDAConnThread_10,5,main] (DATABASE = db_lp3), (DRDAID = {27}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 08:55:50 BRT 2017 Thread[DRDAConnThread_10,5,main] Cleanup action starting
+Thu Mar 23 11:36:17 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {28}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:36:17 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -215,8 +215,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 08:55:50 BRT 2017 Thread[DRDAConnThread_10,5,main] (DATABASE = db_lp3), (DRDAID = {28}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 08:55:50 BRT 2017 Thread[DRDAConnThread_10,5,main] Cleanup action starting
+Thu Mar 23 11:36:17 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {29}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:36:17 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -266,8 +266,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 08:55:50 BRT 2017 Thread[DRDAConnThread_10,5,main] (DATABASE = db_lp3), (DRDAID = {29}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 08:55:50 BRT 2017 Thread[DRDAConnThread_10,5,main] Cleanup action starting
+Thu Mar 23 11:36:17 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {30}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:36:17 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -317,8 +317,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 08:55:50 BRT 2017 Thread[DRDAConnThread_10,5,main] (DATABASE = db_lp3), (DRDAID = {30}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 08:55:50 BRT 2017 Thread[DRDAConnThread_12,5,main] Cleanup action starting
+Thu Mar 23 11:36:17 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {31}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:36:17 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -368,8 +368,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 08:55:50 BRT 2017 Thread[DRDAConnThread_12,5,main] (DATABASE = db_lp3), (DRDAID = {31}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 08:55:50 BRT 2017 Thread[DRDAConnThread_10,5,main] Cleanup action starting
+Thu Mar 23 11:36:17 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {32}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:36:17 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -419,8 +419,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 08:55:50 BRT 2017 Thread[DRDAConnThread_10,5,main] (DATABASE = db_lp3), (DRDAID = {32}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 08:55:50 BRT 2017 Thread[DRDAConnThread_10,5,main] Cleanup action starting
+Thu Mar 23 11:36:17 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {33}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:36:17 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -470,8 +470,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 08:55:50 BRT 2017 Thread[DRDAConnThread_10,5,main] (DATABASE = db_lp3), (DRDAID = {33}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 08:55:50 BRT 2017 Thread[DRDAConnThread_12,5,main] Cleanup action starting
+Thu Mar 23 11:36:17 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {34}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:41:16 BRT 2017 Thread[DRDAConnThread_9,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -521,8 +521,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 08:55:50 BRT 2017 Thread[DRDAConnThread_12,5,main] (DATABASE = db_lp3), (DRDAID = {34}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 09:00:50 BRT 2017 Thread[DRDAConnThread_12,5,main] Cleanup action starting
+Thu Mar 23 11:41:16 BRT 2017 Thread[DRDAConnThread_9,5,main] (DATABASE = db_lp3), (DRDAID = {51}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:41:17 BRT 2017 Thread[DRDAConnThread_9,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -572,8 +572,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 09:00:50 BRT 2017 Thread[DRDAConnThread_12,5,main] (DATABASE = db_lp3), (DRDAID = {36}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 09:00:50 BRT 2017 Thread[DRDAConnThread_3,5,main] Cleanup action starting
+Thu Mar 23 11:41:17 BRT 2017 Thread[DRDAConnThread_9,5,main] (DATABASE = db_lp3), (DRDAID = {52}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:41:17 BRT 2017 Thread[DRDAConnThread_9,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -623,8 +623,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 09:00:50 BRT 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = db_lp3), (DRDAID = {37}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 09:00:50 BRT 2017 Thread[DRDAConnThread_12,5,main] Cleanup action starting
+Thu Mar 23 11:41:17 BRT 2017 Thread[DRDAConnThread_9,5,main] (DATABASE = db_lp3), (DRDAID = {53}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:41:17 BRT 2017 Thread[DRDAConnThread_9,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -674,8 +674,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 09:00:50 BRT 2017 Thread[DRDAConnThread_12,5,main] (DATABASE = db_lp3), (DRDAID = {38}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 09:00:50 BRT 2017 Thread[DRDAConnThread_3,5,main] Cleanup action starting
+Thu Mar 23 11:41:17 BRT 2017 Thread[DRDAConnThread_9,5,main] (DATABASE = db_lp3), (DRDAID = {54}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:41:17 BRT 2017 Thread[DRDAConnThread_9,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -725,8 +725,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 09:00:50 BRT 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = db_lp3), (DRDAID = {39}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 09:00:50 BRT 2017 Thread[DRDAConnThread_12,5,main] Cleanup action starting
+Thu Mar 23 11:41:17 BRT 2017 Thread[DRDAConnThread_9,5,main] (DATABASE = db_lp3), (DRDAID = {55}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:41:17 BRT 2017 Thread[DRDAConnThread_9,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -776,8 +776,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 09:00:50 BRT 2017 Thread[DRDAConnThread_12,5,main] (DATABASE = db_lp3), (DRDAID = {40}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 09:00:50 BRT 2017 Thread[DRDAConnThread_3,5,main] Cleanup action starting
+Thu Mar 23 11:41:17 BRT 2017 Thread[DRDAConnThread_9,5,main] (DATABASE = db_lp3), (DRDAID = {56}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:41:17 BRT 2017 Thread[DRDAConnThread_9,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -827,8 +827,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 09:00:50 BRT 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = db_lp3), (DRDAID = {41}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 09:00:50 BRT 2017 Thread[DRDAConnThread_12,5,main] Cleanup action starting
+Thu Mar 23 11:41:17 BRT 2017 Thread[DRDAConnThread_9,5,main] (DATABASE = db_lp3), (DRDAID = {57}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:41:17 BRT 2017 Thread[DRDAConnThread_9,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -878,8 +878,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 09:00:50 BRT 2017 Thread[DRDAConnThread_12,5,main] (DATABASE = db_lp3), (DRDAID = {42}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 09:00:50 BRT 2017 Thread[DRDAConnThread_3,5,main] Cleanup action starting
+Thu Mar 23 11:41:17 BRT 2017 Thread[DRDAConnThread_9,5,main] (DATABASE = db_lp3), (DRDAID = {58}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:46:16 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -929,8 +929,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 09:00:50 BRT 2017 Thread[DRDAConnThread_3,5,main] (DATABASE = db_lp3), (DRDAID = {43}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 09:05:50 BRT 2017 Thread[DRDAConnThread_8,5,main] Cleanup action starting
+Thu Mar 23 11:46:16 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {115}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:46:16 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -980,8 +980,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 09:05:50 BRT 2017 Thread[DRDAConnThread_8,5,main] (DATABASE = db_lp3), (DRDAID = {51}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 09:05:50 BRT 2017 Thread[DRDAConnThread_9,5,main] Cleanup action starting
+Thu Mar 23 11:46:16 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {116}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:46:16 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -1031,8 +1031,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 09:05:50 BRT 2017 Thread[DRDAConnThread_9,5,main] (DATABASE = db_lp3), (DRDAID = {52}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 09:05:50 BRT 2017 Thread[DRDAConnThread_8,5,main] Cleanup action starting
+Thu Mar 23 11:46:16 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {117}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:46:17 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -1082,8 +1082,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 09:05:50 BRT 2017 Thread[DRDAConnThread_8,5,main] (DATABASE = db_lp3), (DRDAID = {53}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 09:05:50 BRT 2017 Thread[DRDAConnThread_9,5,main] Cleanup action starting
+Thu Mar 23 11:46:17 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {118}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:46:17 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -1133,8 +1133,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 09:05:50 BRT 2017 Thread[DRDAConnThread_9,5,main] (DATABASE = db_lp3), (DRDAID = {54}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 09:05:50 BRT 2017 Thread[DRDAConnThread_8,5,main] Cleanup action starting
+Thu Mar 23 11:46:17 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {119}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:46:17 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -1184,8 +1184,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 09:05:50 BRT 2017 Thread[DRDAConnThread_8,5,main] (DATABASE = db_lp3), (DRDAID = {55}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 09:05:50 BRT 2017 Thread[DRDAConnThread_9,5,main] Cleanup action starting
+Thu Mar 23 11:46:17 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {120}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:46:17 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -1235,8 +1235,8 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 09:05:50 BRT 2017 Thread[DRDAConnThread_9,5,main] (DATABASE = db_lp3), (DRDAID = {56}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 09:05:50 BRT 2017 Thread[DRDAConnThread_8,5,main] Cleanup action starting
+Thu Mar 23 11:46:17 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {121}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:46:17 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
 java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -1286,55 +1286,4 @@ java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu Mar 23 09:05:50 BRT 2017 Thread[DRDAConnThread_8,5,main] (DATABASE = db_lp3), (DRDAID = {57}), Banco de dados 'db_lp3' não encontrado.
-Thu Mar 23 09:05:50 BRT 2017 Thread[DRDAConnThread_9,5,main] Cleanup action starting
-java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.Driver20.connect(Unknown Source)
-	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
-	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Caused by: java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	... 19 more
-============= begin nested exception, level (1) ===========
-java.sql.SQLException: Banco de dados 'db_lp3' não encontrado.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
-	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
-	at org.apache.derby.jdbc.Driver20.connect(Unknown Source)
-	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
-	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-============= end nested exception, level (1) ===========
-Cleanup action completed
-Thu Mar 23 09:05:50 BRT 2017 Thread[DRDAConnThread_9,5,main] (DATABASE = db_lp3), (DRDAID = {58}), Banco de dados 'db_lp3' não encontrado.
+Thu Mar 23 11:46:17 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = db_lp3), (DRDAID = {122}), Banco de dados 'db_lp3' não encontrado.
