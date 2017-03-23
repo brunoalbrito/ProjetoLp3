@@ -27,7 +27,11 @@ public class UserDAO implements GenericDAO<User> {
 
     @Override
     public void create(User e) {
-        em.persist(e);
+        try {
+            em.persist(e);
+        } catch (Exception ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
     @Override
