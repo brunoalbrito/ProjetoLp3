@@ -83,12 +83,6 @@
                 background-color: rgba(9,181,29,0.4);
             }
             
-            body header nav ul li:nth-child(4) a{
-                padding: 2% 20%;
-                border: 2px solid #fff;
-                border-radius: 5px;
-            }
-            
             body header nav ul li a,body header nav ul li a:active,body header nav ul li a:visited{
                 text-decoration: none;
                 color: #fff;
@@ -111,6 +105,43 @@
                 padding: 0;
                 display: flex;
             }
+            
+            body header nav ul li:nth-child(4) span{
+                width: 100%;
+                height: 100%;
+                
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;                
+            }
+            
+            body header nav ul li:nth-child(4) ul{
+                width: 100%;
+                height: 200%;
+                
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center; 
+            }
+            
+            body header nav ul li:nth-child(4) ul li{
+                width: 100%;
+                height: 50%;
+            }
+            
+            body header nav ul li:nth-child(4) span:hover{
+                color: rgb(13,255,0);
+                transition-duration: 0.7s;
+                cursor: pointer;
+            }
+            
+            body header nav ul li:nth-child(4) span:hover, ul{
+                display: block;
+            }
 
             body header nav ul li:hover{
                 background-color: #fff;
@@ -124,20 +155,6 @@
 
             body header nav ul li:nth-child(1):hover{
                 background-color: rgba(9,181,29,0.4);
-            }
-            
-            body header nav ul li:nth-child(4):hover{
-                background-color: rgb(13,255,0);
-            }
-            
-            body header nav ul li:nth-child(4):hover a{
-                color: #fff;
-            }
-            
-            body header nav ul li:nth-child(4) a:hover{
-                color: rgb(13,255,0);
-                background-color: #fff;
-                transition-duration: 0.7s;
             }
 
             body header nav ul li:nth-child(1):hover a{
@@ -174,7 +191,13 @@
                     <li><a href="index.jsp"><img alt="logo" src="..."/>BRConsulta</a></li>
                     <li><a href="home.jsp">busca</a></li>
                     <li><a href="favorites.jsp">favoritos</a></li>
-                    <li><a href="profile.jsp">perfil</a></li>
+                    <li>
+                        <span>${usuario.userName}</span>
+                        <ul style="display: none;">
+                            <li><a href="profile.jsp">perfil</a></li>
+                            <li><a href="">logout</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </header>
