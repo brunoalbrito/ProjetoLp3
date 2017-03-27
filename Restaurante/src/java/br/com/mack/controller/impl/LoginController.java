@@ -20,6 +20,7 @@ import javax.naming.NamingException;
  * @author 31595472
  */
 public class LoginController extends AbstractController{
+
     UserDAO userDAO = lookupUserDAOBean();
 
     @Override
@@ -27,17 +28,16 @@ public class LoginController extends AbstractController{
         String usuario = request.getParameter("usuario");
         String senha = request.getParameter("senha");
         
-        List<User> users = null;
+        User user = null;
+        user = userDAO.findByUserAndPassword(usuario, senha);
         
-        users = userDAO.readAll();
-        
-        for (User user : users) {
-            if(user.getUserName().equals(usuario) && user.getPassword().equals(senha)){
-                System.out.println(user);
-                break;
-            }
+        if(user != null){
+            this.returnPage = "user_area/home.jsp";
+            this.request.getSession().setAttribute("usuario", user);
+        }else{
+            this.returnPage = "erro.jsp";
+            this.request.getSession().setAttribute("errorMessages", new String[]{"Usuário ou senha incorreto!"});
         }
-        
     }
 
     private UserDAO lookupUserDAOBean() {

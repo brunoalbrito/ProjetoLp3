@@ -3,11 +3,9 @@
 <c:import url="/template/header_post_login.jsp"/>
 <link href="../css/favorites.css" rel="stylesheet" type="text/css"/>
 <main>
-    Visualizar dados
+    Visualizar lista de favoritos
     
-    Alterar dados
-    
-    Excluir conta
+    Desfazer favorito    
 </main>
 
 <c:import url="/template/footer.jsp"/>

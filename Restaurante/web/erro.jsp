@@ -1,17 +1,14 @@
-<%-- 
-    Document   : erro
-    Created on : 23/03/2017, 14:45:24
-    Author     : 41583469
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:import url="/template/header.jsp"/>
+
+<main style="width: 100%; height: 95%; position: relative; top: 7.5%;">
+    <h1>Erro ao realizar operação</h1>
+    <ul>
+        <c:forEach items="${errorMessages}" var="e">
+            <li>${e}</li>
+        </c:forEach>
+    </ul>
+</main>
+
+<c:import url="/template/footer.jsp"/>

@@ -10,6 +10,7 @@ import java.util.List;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityNotFoundException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContextType;
 import javax.persistence.Query;
@@ -54,6 +55,17 @@ public class UserDAO implements GenericDAO<User> {
     @Override
     public void delete(User e) {
         em.remove(em.merge(e));
+    }
+
+    public User findByUserAndPassword(String userName, String password) {
+        try {
+            return (User) em.createQuery("select u from User u where u.userName = :un and u.password = :p")
+                    .setParameter("un", userName)
+                    .setParameter("p", password)
+                    .getSingleResult();
+        } catch (Exception e) {
+            return null;
+        }
     }
 
 }
