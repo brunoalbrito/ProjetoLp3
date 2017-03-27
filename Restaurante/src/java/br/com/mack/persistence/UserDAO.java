@@ -63,7 +63,7 @@ public class UserDAO implements GenericDAO<User> {
                     .setParameter("un", userName)
                     .setParameter("p", password)
                     .getSingleResult();
-        } catch (EntityNotFoundException e) {
+        } catch (Exception e) {
             return null;
         }
     }

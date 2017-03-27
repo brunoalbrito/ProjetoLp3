@@ -1,7 +1,7 @@
-Fri Mar 24 08:32:02 BRT 2017 : Apache Derby Servidor de Rede - 10.10.2.0 - (1582446) iniciado e pronto para aceitar conexões na porta 1527 em {3}
+Mon Mar 27 13:00:55 BRT 2017 : Apache Derby Servidor de Rede - 10.10.2.0 - (1582446) iniciado e pronto para aceitar conexões na porta 1527 em {3}
 ----------------------------------------------------------------
-Fri Mar 24 08:32:02 BRT 2017:
- Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância a816c00e-015b-0016-6ecf-00003d9c611f
+Mon Mar 27 13:01:03 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância a816c00e-015b-107f-b0b4-00003d9c611f
 no diretório de banco de dados C:\Temp\ProjetoLp3\Restaurante\db\restaurante 
 
 java.vendor=Oracle Corporation
@@ -12,7 +12,7 @@ os.arch=amd64
 os.version=10.0
 derby.system.home=C:\Temp\ProjetoLp3\Restaurante\db
 Carregador de classe do banco de dados iniciado - derby.database.classpath=''
-Fri Mar 24 08:32:04 BRT 2017 Thread[DRDAConnThread_2,5,main] (XID = 2249), (SESSIONID = 0), (DATABASE = restaurante), (DRDAID = {1}), Cleanup action starting
+Mon Mar 27 13:01:11 BRT 2017 Thread[DRDAConnThread_2,5,main] (XID = 3510), (SESSIONID = 0), (DATABASE = restaurante), (DRDAID = {1}), Cleanup action starting
 java.sql.SQLNonTransientConnectionException: Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -62,4 +62,38 @@ java.sql.SQLException: Ocorreu uma falha de autenticação da conexão.  Motivo: Au
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Fri Mar 24 08:32:04 BRT 2017 Thread[DRDAConnThread_2,5,main] (DATABASE = restaurante), (DRDAID = {1}), Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
+Mon Mar 27 13:01:11 BRT 2017 Thread[DRDAConnThread_2,5,main] (DATABASE = restaurante), (DRDAID = {1}), Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
+----------------------------------------------------------------
+Mon Mar 27 13:04:48 BRT 2017:
+Encerrando a instância a816c00e-015b-107f-b0b4-00003d9c611f
+Mon Mar 27 13:04:48 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = restaurante), (DRDAID = {11}), Banco de dados 'restaurante' fechado.
+----------------------------------------------------------------
+Mon Mar 27 13:05:00 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância e3a74057-015b-107f-b0b4-00003d9c611f
+no diretório de banco de dados C:\Temp\ProjetoLp3\Restaurante\db\restaurante 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_101-b13
+user.dir=C:\glassfish\javadb
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Temp\ProjetoLp3\Restaurante\db
+Carregador de classe do banco de dados iniciado - derby.database.classpath=''
+----------------------------------------------------------------
+Mon Mar 27 13:05:14 BRT 2017:
+Encerrando a instância e3a74057-015b-107f-b0b4-00003d9c611f
+Mon Mar 27 13:05:14 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = restaurante), (DRDAID = {13}), Banco de dados 'restaurante' fechado.
+----------------------------------------------------------------
+Mon Mar 27 13:05:17 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância bcb6c0f3-015b-107f-b0b4-00003d9c611f
+no diretório de banco de dados C:\Temp\ProjetoLp3\Restaurante\db\restaurante 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_101-b13
+user.dir=C:\glassfish\javadb
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Temp\ProjetoLp3\Restaurante\db
+Carregador de classe do banco de dados iniciado - derby.database.classpath=''

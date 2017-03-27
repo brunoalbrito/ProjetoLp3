@@ -20,6 +20,7 @@ import javax.naming.NamingException;
  * @author 31595472
  */
 public class LoginController extends AbstractController{
+
     UserDAO userDAO = lookupUserDAOBean();
 
     @Override
