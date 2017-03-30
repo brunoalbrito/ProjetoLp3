@@ -1,7 +1,7 @@
-Mon Mar 27 13:00:55 BRT 2017 : Apache Derby Servidor de Rede - 10.10.2.0 - (1582446) iniciado e pronto para aceitar conexões na porta 1527 em {3}
+Thu Mar 30 09:02:58 BRT 2017 : Apache Derby Servidor de Rede - 10.10.2.0 - (1582446) iniciado e pronto para aceitar conexões na porta 1527 em {3}
 ----------------------------------------------------------------
-Mon Mar 27 13:01:03 BRT 2017:
- Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância a816c00e-015b-107f-b0b4-00003d9c611f
+Thu Mar 30 09:03:31 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância a816c00e-015b-1f18-ea40-00003d9c611f
 no diretório de banco de dados C:\Temp\ProjetoLp3\Restaurante\db\restaurante 
 
 java.vendor=Oracle Corporation
@@ -12,7 +12,7 @@ os.arch=amd64
 os.version=10.0
 derby.system.home=C:\Temp\ProjetoLp3\Restaurante\db
 Carregador de classe do banco de dados iniciado - derby.database.classpath=''
-Mon Mar 27 13:01:11 BRT 2017 Thread[DRDAConnThread_2,5,main] (XID = 3510), (SESSIONID = 0), (DATABASE = restaurante), (DRDAID = {1}), Cleanup action starting
+Thu Mar 30 09:03:33 BRT 2017 Thread[DRDAConnThread_2,5,main] (XID = 795), (SESSIONID = 0), (DATABASE = restaurante), (DRDAID = {1}), Cleanup action starting
 java.sql.SQLNonTransientConnectionException: Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -62,38 +62,94 @@ java.sql.SQLException: Ocorreu uma falha de autenticação da conexão.  Motivo: Au
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Mon Mar 27 13:01:11 BRT 2017 Thread[DRDAConnThread_2,5,main] (DATABASE = restaurante), (DRDAID = {1}), Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
-----------------------------------------------------------------
-Mon Mar 27 13:04:48 BRT 2017:
-Encerrando a instância a816c00e-015b-107f-b0b4-00003d9c611f
-Mon Mar 27 13:04:48 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = restaurante), (DRDAID = {11}), Banco de dados 'restaurante' fechado.
-----------------------------------------------------------------
-Mon Mar 27 13:05:00 BRT 2017:
- Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância e3a74057-015b-107f-b0b4-00003d9c611f
-no diretório de banco de dados C:\Temp\ProjetoLp3\Restaurante\db\restaurante 
-
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_101-b13
-user.dir=C:\glassfish\javadb
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
-derby.system.home=C:\Temp\ProjetoLp3\Restaurante\db
-Carregador de classe do banco de dados iniciado - derby.database.classpath=''
-----------------------------------------------------------------
-Mon Mar 27 13:05:14 BRT 2017:
-Encerrando a instância e3a74057-015b-107f-b0b4-00003d9c611f
-Mon Mar 27 13:05:14 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = restaurante), (DRDAID = {13}), Banco de dados 'restaurante' fechado.
-----------------------------------------------------------------
-Mon Mar 27 13:05:17 BRT 2017:
- Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância bcb6c0f3-015b-107f-b0b4-00003d9c611f
-no diretório de banco de dados C:\Temp\ProjetoLp3\Restaurante\db\restaurante 
-
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_101-b13
-user.dir=C:\glassfish\javadb
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
-derby.system.home=C:\Temp\ProjetoLp3\Restaurante\db
-Carregador de classe do banco de dados iniciado - derby.database.classpath=''
+Thu Mar 30 09:03:33 BRT 2017 Thread[DRDAConnThread_2,5,main] (DATABASE = restaurante), (DRDAID = {1}), Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
+Thu Mar 30 09:03:47 BRT 2017 Thread[DRDAConnThread_2,5,main] (XID = 796), (SESSIONID = 1), (DATABASE = restaurante), (DRDAID = {2}), Cleanup action starting
+java.sql.SQLInvalidAuthorizationSpecException: O nome de usuário '31595472' não é válido.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.wrapInSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserIsNotARole(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserCredentials(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.Driver20.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+Caused by: java.sql.SQLException: O nome de usuário '31595472' não é válido.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 20 more
+Caused by: ERROR 28502: O nome de usuário '31595472' não é válido.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.util.IdUtil.getUserAuthorizationId(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.initialize(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.setupConnection(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.startTransaction(Unknown Source)
+	... 15 more
+============= begin nested exception, level (1) ===========
+java.sql.SQLException: O nome de usuário '31595472' não é válido.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.wrapInSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserIsNotARole(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserCredentials(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.Driver20.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+Caused by: ERROR 28502: O nome de usuário '31595472' não é válido.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.util.IdUtil.getUserAuthorizationId(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.initialize(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.setupConnection(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.startTransaction(Unknown Source)
+	... 15 more
+============= end nested exception, level (1) ===========
+============= begin nested exception, level (2) ===========
+ERROR 28502: O nome de usuário '31595472' não é válido.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.iapi.util.IdUtil.getUserAuthorizationId(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.initialize(Unknown Source)
+	at org.apache.derby.impl.db.BasicDatabase.setupConnection(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.startTransaction(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserIsNotARole(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserCredentials(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.Driver20.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+============= end nested exception, level (2) ===========
+Cleanup action completed
+Thu Mar 30 09:03:47 BRT 2017 Thread[DRDAConnThread_2,5,main] (DATABASE = restaurante), (DRDAID = {2}), O nome de usuário '31595472' não é válido.
