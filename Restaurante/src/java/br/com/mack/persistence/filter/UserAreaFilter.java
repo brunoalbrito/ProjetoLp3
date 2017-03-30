@@ -38,7 +38,7 @@ public class UserAreaFilter implements Filter {
         if (uri.contains("user_area") && session.getAttribute("usuario") == null) {
             resp.sendRedirect("../signin.jsp");
         } else {
-            doFilter(request, response, chain);
+            chain.doFilter(request, response);
         }
 
     }
