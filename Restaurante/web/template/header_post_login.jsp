@@ -239,7 +239,7 @@
                         <span id="profile">${usuario.userName}</span>
                         <ul id="sub_menu" onmouseout="setColor()">
                             <li><a href="profile.jsp">perfil</a></li>
-                            <li><a href="#">logout</a></li>
+                            <li><a href="${pageContext.request.contextPath}/FrontController?ctrl=Logout">logout</a></li>
                         </ul>
                     </li>
                 </ul>
