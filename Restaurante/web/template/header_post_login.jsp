@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html><!DOCTYPE html>
 <html>
     <head>
@@ -232,7 +233,7 @@
         <header>
             <nav>
                 <ul>
-                    <li id="logo"><a href="index.jsp"><img alt="logo" src="..."/>BRConsulta</a></li>
+                    <li id="logo"><a href="<c:url value="/index.jsp"/>"><img alt="logo" src="..."/>BRConsulta</a></li>
                     <li><a href="home.jsp">busca</a></li>
                     <li><a href="favorites.jsp">favoritos</a></li>
                     <li onmouseout="setColor()" onmouseenter="setColor2()">
