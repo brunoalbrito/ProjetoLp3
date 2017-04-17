@@ -1,7 +1,7 @@
-Tue Apr 04 10:02:40 BRT 2017 : Apache Derby Servidor de Rede - 10.10.2.0 - (1582446) iniciado e pronto para aceitar conexões na porta 1527 em {3}
+Mon Apr 17 16:25:29 BRT 2017 : Apache Derby Servidor de Rede - 10.10.2.0 - (1582446) iniciado e pronto para aceitar conexões na porta 1527 em {3}
 ----------------------------------------------------------------
-Tue Apr 04 10:02:42 BRT 2017:
- Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância a816c00e-015b-390f-5f6c-00003d9c611f
+Mon Apr 17 16:25:32 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância a816c00e-015b-7d60-87a8-00003d9c611f
 no diretório de banco de dados C:\Temp\ProjetoLp3\Restaurante\db\restaurante 
 
 java.vendor=Oracle Corporation
@@ -12,7 +12,7 @@ os.arch=amd64
 os.version=10.0
 derby.system.home=C:\Temp\ProjetoLp3\Restaurante\db
 Carregador de classe do banco de dados iniciado - derby.database.classpath=''
-Tue Apr 04 10:02:43 BRT 2017 Thread[DRDAConnThread_2,5,main] (XID = 872), (SESSIONID = 0), (DATABASE = restaurante), (DRDAID = {1}), Cleanup action starting
+Mon Apr 17 16:25:34 BRT 2017 Thread[DRDAConnThread_2,5,main] (XID = 872), (SESSIONID = 0), (DATABASE = restaurante), (DRDAID = {1}), Cleanup action starting
 java.sql.SQLNonTransientConnectionException: Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
@@ -62,4 +62,4 @@ java.sql.SQLException: Ocorreu uma falha de autenticação da conexão.  Motivo: Au
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Tue Apr 04 10:02:43 BRT 2017 Thread[DRDAConnThread_2,5,main] (DATABASE = restaurante), (DRDAID = {1}), Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
+Mon Apr 17 16:25:34 BRT 2017 Thread[DRDAConnThread_2,5,main] (DATABASE = restaurante), (DRDAID = {1}), Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
