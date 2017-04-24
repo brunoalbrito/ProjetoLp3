@@ -148,14 +148,14 @@
             body footer{
                 width: 100%;
                 height: 5%;
-
+                
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
                 background-color: rgb(13,255,0);
             }
-            
+
             body footer a{
                 color: #fff;
                 font-size: 14px;
