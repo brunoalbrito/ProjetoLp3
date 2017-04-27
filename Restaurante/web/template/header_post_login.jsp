@@ -47,41 +47,65 @@
             body header nav #main_menu .main_options{
                 width: 25%;
                 height: 100%;
+                color: #fff;
                 float: left;
             }
 
+            body header nav #main_menu .main_options a{
+                width: 100%;
+                height: 100%;
+                color: #fff;
+                text-align-last: center;
+                line-height: 300%;
+                display: inline-block;
+                text-decoration: none;
+                
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            body header nav #main_menu .main_options:nth-child(1) a{
+                background-color:rgba(9,181,29,0.4);
+            }
             body header nav #main_menu .main_options #profile{
                 width: 100%;
                 height: 100%;
                 display: inline-block;
                 text-align: center;
                 line-height: 300%;
-
+                background-color: rgb(13,255,0);
+                color: #fff; 
+                cursor: pointer;
+                
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
             }
+            
 
-            body header nav #main_menu .main_options a{
-                width: 100%;
-                height: 100%;
-                text-align-last: center;
-                line-height: 300%;
-                display: inline-block;
-                text-decoration: none;
-            }
             
             body header nav ul li a:visited{
                 text-decoration: none;
                 color: #fff;
             }
-
-            body header nav #main_menu li:hover{
-                background-color: #fff;
-                color: rgb(13,255,0);
-                transition-duration: 0.7s;
-            }
             
             body header nav #main_menu li a:hover{
                 background-color: #fff;
                 color: rgb(13,255,0);
+                transition-duration: 0.7s;
+            }                
+            
+            body header nav #main_menu .main_options:nth-child(1) a:hover{                
+                background-color:rgba(9,181,29,0.4);
+                color: #fff;
+            }                
+            
+            body header nav #main_menu .main_options #profile:hover{
+                color: rgb(13,255,0);
+                background-color: #fff;
                 transition-duration: 0.7s;
             }
 
@@ -103,6 +127,11 @@
             }
             
             body header nav #sub_menu .sub_options a{
+                color: #fff;
+            }
+            
+            body header nav #sub_menu .sub_options a:hover{
+                background-color:rgba(9,181,29,0.4);
                 color: #fff;
             }
             
