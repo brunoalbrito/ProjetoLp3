@@ -1,5 +1,7 @@
 package br.com.mack.servlet;
 
+import br.com.mack.parser.InstagramUserJSONParser;
+import br.com.mack.parser.JSONParser;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -8,6 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.InetSocketAddress;
 import java.net.Proxy;
 import java.net.URL;
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,8 +22,9 @@ import javax.servlet.http.HttpServletResponse;
  * @author 31595472
  */
 @WebServlet(name = "AuthenticationByInstagram", urlPatterns = {"/AuthenticationByInstagram"})
-public class AuthenticationServlet extends HttpServlet {
-
+public class AuthenticationByInstagram extends HttpServlet {
+    
+    private InstagramUserJSONParser parser = new InstagramUserJSONParser();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -56,10 +60,9 @@ public class AuthenticationServlet extends HttpServlet {
             conn.setRequestProperty("User-Agent", "Mozilla/5.0");
             conn.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
 
-            String redirect_uri = "http://localhost:8080/InstagramAPITest/AuthenticationByInstagram";
+            String redirect_uri = "http://localhost:8080/Restaurante/AuthenticationByInstagram";
             String urlParameters = "client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SECRET + "&code=" + code + "&grant_type=authorization_code&redirect_uri=" + redirect_uri;
-//            String urlParameters = "client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SECRET + "&code=" + code + "&grant_type=public_content&redirect_uri=" + redirect_uri;
-            System.out.println("Passou pela requisição post!");
+            //String urlParameters = "client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SECRET + "&code=" + code + "&grant_type=public_content&redirect_uri=" + redirect_uri;
             conn.setDoOutput(true);
             DataOutputStream wr = new DataOutputStream(conn.getOutputStream());
             wr.writeBytes(urlParameters);
@@ -76,14 +79,15 @@ public class AuthenticationServlet extends HttpServlet {
                     resp.append(inputLine);
                 }
                 in.close();
-                request.getRequestDispatcher("FrontController").forward(request, response);
+                
+                request.getSession().setAttribute("usuario", parser.parse(resp.toString()));                
+                request.getRequestDispatcher("user_area/home.jsp").forward(request, response);
             }
         } else {
             error_reason = request.getParameter("error_reason");
             error_description = request.getParameter("error_description");
-            System.out.println(error_reason);
-            System.out.println(error_description);
-            response.sendRedirect("error.jsp");
+            request.getSession().setAttribute("errorMessages", new String[]{error_reason, error_description});
+            request.getRequestDispatcher("error.jsp").forward(request, response);
         }
     }
 
