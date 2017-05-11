@@ -6,7 +6,6 @@
 package br.com.mack.parser;
 
 import java.io.Serializable;
-import javax.ejb.Local;
 
 /**
  *
