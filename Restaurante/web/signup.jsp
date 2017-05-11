@@ -26,6 +26,12 @@
 
         <input type="submit" value="REGISTRAR">
     </form>
+    
+    ou
+    
+    <a href="https://api.instagram.com/oauth/authorize/?client_id=1631b13910b44f0a8b95f3c96b061470&redirect_uri=http://localhost:8080/Restaurante/AuthenticationByInstagram&response_type=code">
+        <button>Instagram</button>
+    </a>
 </main>
 
 <c:import url="/template/footer.jsp"/>
