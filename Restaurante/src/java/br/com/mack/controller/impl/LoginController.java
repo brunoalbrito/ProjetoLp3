@@ -8,7 +8,6 @@ package br.com.mack.controller.impl;
 import br.com.mack.controller.AbstractController;
 import br.com.mack.persistence.UserDAO;
 import br.com.mack.persistence.entities.User;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.naming.Context;
