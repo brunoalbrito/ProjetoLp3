@@ -6,7 +6,7 @@
 package br.com.mack.controller.impl;
 
 import br.com.mack.controller.AbstractController;
-import br.com.mack.persistence.UserDAO;
+import br.com.mack.persistence.CommonUserDAO;
 import br.com.mack.persistence.entities.CommonUser;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ import javax.naming.NamingException;
  */
 public class CadastroController extends AbstractController {
 
-    UserDAO userDAO = lookupUserDAOBean();
+    CommonUserDAO userDAO = lookupUserDAOBean();
 
     @Override
     public void execute() {
@@ -79,10 +79,10 @@ public class CadastroController extends AbstractController {
         }
     }
 
-    private UserDAO lookupUserDAOBean() {
+    private CommonUserDAO lookupUserDAOBean() {
         try {
             Context c = new InitialContext();
-            return (UserDAO) c.lookup("java:global/Restaurante/UserDAO!br.com.mack.persistence.UserDAO");
+            return (CommonUserDAO) c.lookup("java:global/Restaurante/UserDAO!br.com.mack.persistence.UserDAO");
         } catch (NamingException ne) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", ne);
             throw new RuntimeException(ne);

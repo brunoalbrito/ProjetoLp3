@@ -6,7 +6,7 @@
 package br.com.mack.controller.impl;
 
 import br.com.mack.controller.AbstractController;
-import br.com.mack.persistence.UserDAO;
+import br.com.mack.persistence.CommonUserDAO;
 import br.com.mack.persistence.entities.User;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -20,7 +20,7 @@ import javax.naming.NamingException;
  */
 public class LoginController extends AbstractController{
 
-    UserDAO userDAO = lookupUserDAOBean();
+    CommonUserDAO userDAO = lookupUserDAOBean();
 
     @Override
     public void execute() {
@@ -28,7 +28,7 @@ public class LoginController extends AbstractController{
         String senha = request.getParameter("senha");
         
         User user = null;
-        user = userDAO.findByUserAndPassword(usuario, senha);
+        user = userDAO.login(usuario, senha);
         
         if(user != null){
             this.returnPage = "user_area/home.jsp";
@@ -39,10 +39,10 @@ public class LoginController extends AbstractController{
         }
     }
 
-    private UserDAO lookupUserDAOBean() {
+    private CommonUserDAO lookupUserDAOBean() {
         try {
             Context c = new InitialContext();
-            return (UserDAO) c.lookup("java:global/Restaurante/UserDAO!br.com.mack.persistence.UserDAO");
+            return (CommonUserDAO) c.lookup("java:global/Restaurante/UserDAO!br.com.mack.persistence.UserDAO");
         } catch (NamingException ne) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", ne);
             throw new RuntimeException(ne);
