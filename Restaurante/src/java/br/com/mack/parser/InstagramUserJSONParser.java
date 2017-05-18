@@ -5,6 +5,7 @@
  */
 package br.com.mack.parser;
 
+import br.com.mack.persistence.entities.InstagramUser;
 import br.com.mack.persistence.entities.User;
 import java.io.Serializable;
 import java.io.StringReader;
@@ -43,9 +44,7 @@ public class InstagramUserJSONParser implements JSONParser<User>{
         String profilePicture = u.getJsonString("profile_picture").getString();
         String fullName = u.getJsonString("full_name").getString();
         String accessToken = root.getJsonString("access_token").getString();
-//        user = new User(id, username, profilePicture, fullName, accessToken);
-        user = new User(fullName, null, null, username, null);
-        user.setId(id);
+        user = new InstagramUser(id, profilePicture, accessToken, fullName, null, null, username);
         
         return user;
     }
