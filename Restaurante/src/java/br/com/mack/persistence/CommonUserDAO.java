@@ -7,7 +7,7 @@ package br.com.mack.persistence;
 
 import br.com.mack.persistence.entities.CommonUser;
 import java.util.List;
-import javax.ejb.Stateless;
+import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.PersistenceContextType;
@@ -17,7 +17,7 @@ import javax.persistence.Query;
  *
  * @author Bruno
  */
-@Stateless
+@Stateful
 public class CommonUserDAO implements GenericDAO<CommonUser> {
 
     @PersistenceContext(unitName = "RestaurantePU", type = PersistenceContextType.EXTENDED)

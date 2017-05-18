@@ -7,6 +7,7 @@ package br.com.mack.controller.impl;
 
 import br.com.mack.controller.AbstractController;
 import br.com.mack.persistence.CommonUserDAO;
+import br.com.mack.persistence.GenericDAO;
 import br.com.mack.persistence.entities.CommonUser;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,7 @@ import javax.naming.NamingException;
  */
 public class CadastroController extends AbstractController {
 
-    CommonUserDAO userDAO = lookupUserDAOBean();
+    GenericDAO commonUserDAO = lookupCommonUserDAOLocal();   
 
     @Override
     public void execute() {
@@ -68,7 +69,7 @@ public class CadastroController extends AbstractController {
         }
         
         try {
-            userDAO.create(user);
+            commonUserDAO.create(user);
             request.getSession().setAttribute("usuario", user);
         } catch (Exception e) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", e);
@@ -79,14 +80,16 @@ public class CadastroController extends AbstractController {
         }
     }
 
-    private CommonUserDAO lookupUserDAOBean() {
+    private GenericDAO lookupCommonUserDAOLocal() {
         try {
             Context c = new InitialContext();
-            return (CommonUserDAO) c.lookup("java:global/Restaurante/UserDAO!br.com.mack.persistence.UserDAO");
+            return (GenericDAO) c.lookup("java:global/Restaurante/CommonUserDAO!br.com.mack.persistence.GenericDAO");
         } catch (NamingException ne) {
             Logger.getLogger(getClass().getName()).log(Level.SEVERE, "exception caught", ne);
             throw new RuntimeException(ne);
         }
     }
+
+    
 
 }

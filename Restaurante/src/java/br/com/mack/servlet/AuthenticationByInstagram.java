@@ -1,5 +1,6 @@
 package br.com.mack.servlet;
 
+import br.com.mack.parser.InstagramUserJSONParser;
 import br.com.mack.parser.JSONParser;
 import br.com.mack.persistence.GenericDAO;
 import br.com.mack.persistence.InstagramUserDAO;
@@ -12,7 +13,12 @@ import java.net.HttpURLConnection;
 import java.net.InetSocketAddress;
 import java.net.Proxy;
 import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.ejb.EJB;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,13 +31,18 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "AuthenticationByInstagram", urlPatterns = {"/AuthenticationByInstagram"})
 public class AuthenticationByInstagram extends HttpServlet {
+    @EJB
+    private JSONParser parser;
 
     @EJB
     private GenericDAO dao;
-
-    @EJB
-    private JSONParser parser;
     
+//      private JSONParser parser = new InstagramUserJSONParser();
+      
+      
+      
+    
+       
     
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -88,7 +99,13 @@ public class AuthenticationByInstagram extends HttpServlet {
                 }
                 in.close();
                 
+                System.out.println("**********PRINTANDO DAO E PARSER**********");
+                System.out.println(dao);
+                System.out.println(parser);
+                
                 InstagramUser u = (InstagramUser) parser.parse(resp.toString());
+                System.out.println("*************USUARIO DO INSTAGRAM************");
+                System.out.println(u);
                 
                 if(((InstagramUserDAO)dao).readByInstagramId(u.getInstagramId()) == null){
                     dao.create(u);
@@ -105,7 +122,6 @@ public class AuthenticationByInstagram extends HttpServlet {
             request.getRequestDispatcher("error.jsp").forward(request, response);
         }
     }
-
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

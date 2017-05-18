@@ -10,17 +10,17 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceContextType;
 
 /**
  *
  * @author 31595472
  */
 @Stateless
-public class InstagramUserDAO implements GenericDAO<InstagramUser>{
+public class InstagramUserDAO implements GenericDAO<InstagramUser> {
 
-    @PersistenceContext(unitName = "RestaurantePU")
+    @PersistenceContext(unitName = "RestaurantePU", type = PersistenceContextType.EXTENDED)
     private EntityManager em;
-    
 
     @Override
     public void create(InstagramUser e) {
@@ -36,9 +36,14 @@ public class InstagramUserDAO implements GenericDAO<InstagramUser>{
     public InstagramUser readById(long id) {
         return em.find(InstagramUser.class, id);
     }
-    
-    public InstagramUser readByInstagramId(long id){
-        return em.createQuery("SELECT iu FROM InstagramUser iu WHERE iu.instagramId = :id", InstagramUser.class).setParameter("id", id).getSingleResult();
+
+    public InstagramUser readByInstagramId(long id) {
+        System.out.println(em != null);
+        try {
+            return em.createQuery("SELECT iu FROM InstagramUser iu WHERE iu.instagramId = :id", InstagramUser.class).setParameter("id", id).getSingleResult();
+        } catch (Exception ex) {
+            return null;
+        }
     }
 
     @Override
@@ -50,7 +55,5 @@ public class InstagramUserDAO implements GenericDAO<InstagramUser>{
     public void delete(InstagramUser e) {
         em.remove(em.merge(e));
     }
-    
-    
-    
+
 }
