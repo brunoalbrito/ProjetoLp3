@@ -6,11 +6,13 @@
 package br.com.mack.persistence;
 
 import java.util.List;
+import javax.ejb.Local;
 
 /**
  *
  * @author Bruno
  */
+@Local
 public interface GenericDAO<E> {
 
     public void create(E e);
