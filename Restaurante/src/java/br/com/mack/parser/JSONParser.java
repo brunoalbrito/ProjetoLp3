@@ -12,8 +12,7 @@ import javax.ejb.Local;
  *
  * @author 31595472
  */
+@Local
 public interface JSONParser<E> extends Serializable{
-    E parse(String content);
-    
-    
+    E parse(String content);    
 }
