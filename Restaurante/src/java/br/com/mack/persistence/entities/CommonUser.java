@@ -6,11 +6,13 @@
 package br.com.mack.persistence.entities;
 
 import java.util.Date;
+import javax.persistence.Entity;
 
 /**
  *
  * @author 31595472
  */
+@Entity
 public class CommonUser extends User{
     private String password;
 
