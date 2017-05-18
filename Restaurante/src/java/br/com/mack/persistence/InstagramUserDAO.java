@@ -8,6 +8,8 @@ package br.com.mack.persistence;
 import br.com.mack.persistence.entities.InstagramUser;
 import java.util.List;
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 /**
  *
@@ -15,31 +17,40 @@ import javax.ejb.Stateless;
  */
 @Stateless
 public class InstagramUserDAO implements GenericDAO<InstagramUser>{
+
+    @PersistenceContext(unitName = "RestaurantePU")
+    private EntityManager em;
     
 
     @Override
     public void create(InstagramUser e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        em.persist(e);
     }
 
     @Override
     public List<InstagramUser> readAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return em.createQuery("SELECT iu FROM InstagramUser iu", InstagramUser.class).getResultList();
     }
 
     @Override
     public InstagramUser readById(long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return em.find(InstagramUser.class, id);
+    }
+    
+    public InstagramUser readByInstagramId(long id){
+        return em.createQuery("SELECT iu FROM InstagramUser iu WHERE iu.instagramId = :id", InstagramUser.class).setParameter("id", id).getSingleResult();
     }
 
     @Override
     public void update(InstagramUser e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        em.persist(e);
     }
 
     @Override
     public void delete(InstagramUser e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        em.remove(em.merge(e));
     }
+    
+    
     
 }
