@@ -94,7 +94,8 @@ public class AuthenticationByInstagram extends HttpServlet {
                     dao.create(u);
                 }
                 
-                request.getSession().setAttribute("usuario", u);                
+                request.getSession().setAttribute("usuario", u);
+                request.getSession().setAttribute("usuario_instagram", true);
                 request.getRequestDispatcher("user_area/home.jsp").forward(request, response);
             }
         } else {
