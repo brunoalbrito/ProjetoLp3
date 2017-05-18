@@ -7,7 +7,7 @@ package br.com.mack.controller.impl;
 
 import br.com.mack.controller.AbstractController;
 import br.com.mack.persistence.UserDAO;
-import br.com.mack.persistence.entities.User;
+import br.com.mack.persistence.entities.CommonUser;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -30,7 +30,7 @@ public class CadastroController extends AbstractController {
         
         String senha = request.getParameter("senha");
         String confirmacaoSenha = request.getParameter("conf_senha");
-        User user = new User();
+        CommonUser user = new CommonUser();
         user.setFullName(request.getParameter("nome_completo"));
         user.setBirthday(request.getParameter("dt_nasc"));
         user.setEmail(request.getParameter("email"));
