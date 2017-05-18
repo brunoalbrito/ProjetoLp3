@@ -17,6 +17,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -27,42 +29,31 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "Usuario")
-public class User implements Serializable{
+@Inheritance(strategy = InheritanceType.JOINED)//Uma tabela para cada classe (incluindo a abstrata)
+public abstract class User implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    
     private String fullName;
     
     @Temporal(TemporalType.DATE)
     private Date birthday;
+    
     private String email;
+    
     @Column(unique = true)
     private String userName;
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-    private String password;
 
     public User() {
     }
 
-    public User(String fullName, Date birthday, String email, String user, String password) {
+    public User(String fullName, Date birthday, String email, String userName) {
         this.fullName = fullName;
         this.birthday = birthday;
         this.email = email;
-        this.userName = user;
-        this.password = password;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" + "id=" + id + ", fullName=" + fullName + ", birthday=" + birthday + ", email=" + email + ", user=" + userName + ", password=" + password + '}';
+        this.userName = userName;
     }
 
     public long getId() {
@@ -97,12 +88,12 @@ public class User implements Serializable{
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
     
     public void setBirthday(String birthday) {
@@ -112,8 +103,13 @@ public class User implements Serializable{
         } catch (ParseException ex) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
+    }    
 
+    @Override
+    public String toString() {
+        return "User{" + "id=" + id + ", fullName=" + fullName + ", birthday=" + birthday + ", email=" + email + ", userName=" + userName + '}';
+    }
+    
     
 
 }
