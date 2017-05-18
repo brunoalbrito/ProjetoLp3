@@ -1,7 +1,9 @@
 package br.com.mack.servlet;
 
-import br.com.mack.parser.InstagramUserJSONParser;
 import br.com.mack.parser.JSONParser;
+import br.com.mack.persistence.GenericDAO;
+import br.com.mack.persistence.InstagramUserDAO;
+import br.com.mack.persistence.entities.InstagramUser;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -23,8 +25,14 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "AuthenticationByInstagram", urlPatterns = {"/AuthenticationByInstagram"})
 public class AuthenticationByInstagram extends HttpServlet {
+
+    @EJB
+    private GenericDAO dao;
+
+    @EJB
+    private JSONParser parser;
     
-    private InstagramUserJSONParser parser = new InstagramUserJSONParser();
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -80,7 +88,13 @@ public class AuthenticationByInstagram extends HttpServlet {
                 }
                 in.close();
                 
-                request.getSession().setAttribute("usuario", parser.parse(resp.toString()));                
+                InstagramUser u = (InstagramUser) parser.parse(resp.toString());
+                
+                if(((InstagramUserDAO)dao).readByInstagramId(u.getInstagramId()) == null){
+                    dao.create(u);
+                }
+                
+                request.getSession().setAttribute("usuario", u);                
                 request.getRequestDispatcher("user_area/home.jsp").forward(request, response);
             }
         } else {
