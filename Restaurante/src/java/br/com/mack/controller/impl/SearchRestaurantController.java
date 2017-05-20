@@ -20,9 +20,10 @@ public class SearchRestaurantController extends AbstractController{
     public void execute() {
             String location = request.getParameter("restaurat");
             String content = RestauranteParser.openURL(location.replace(" ", "_"));
-            ArrayList<Restaurant> rs = (ArrayList< Restaurant>) RestauranteParser.parser(content);
+            
+            ArrayList<Restaurant> rs = (ArrayList< Restaurant>) new RestauranteParser().parse(content);
             request.getSession().setAttribute("restaurants", rs);
-            returnPage = "resultado.jsp";
+            returnPage = "user_area/home.jsp";
     }
     
 }
