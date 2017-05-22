@@ -16,8 +16,9 @@ public class ServiceConnection {
         HttpURLConnection conn = null;
         try {
             URL url = new URL("https://developers.zomato.com/api/v2.1/search?entity_id=67&entity_type=city&q=" + content);
-            Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("172.16.0.10", 3128));
-            conn = (HttpURLConnection) url.openConnection(proxy);
+            //Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("172.16.0.10", 3128));
+            //conn = (HttpURLConnection) url.openConnection(proxy);
+            conn = (HttpURLConnection) url.openConnection();
 
             System.setProperty("java.net.preferIPv4Stack", "true");
 //            HttpURLConnection conn = (HttpURLConnection) url.openConnection();

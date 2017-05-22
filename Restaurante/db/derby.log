@@ -1,25 +1,25 @@
-Thu May 11 09:32:10 BRT 2017 : Apache Derby Servidor de Rede - 10.10.2.0 - (1582446) iniciado e pronto para aceitar conexões na porta 1527 em {3}
+Sat May 20 13:01:29 BRT 2017 : Apache Derby Servidor de Rede - 10.10.2.0 - (1582446) iniciado e pronto para aceitar conexões na porta 1527 em {3}
 ----------------------------------------------------------------
-Thu May 11 09:33:23 BRT 2017:
- Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância a816c00e-015b-f77e-bbb6-00004385dc03
-no diretório de banco de dados C:\Temp\ProjetoLp3Mack\Restaurante\db\restaurante 
+Sat May 20 13:01:35 BRT 2017:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instância a816c00e-015c-2697-9f43-00000c276c1b
+no diretório de banco de dados C:\Users\Bruno\Documents\NetBeansProjects\ProjetoLp3\ProjetoLp3\Restaurante\db\restaurante 
 
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_101-b13
-user.dir=C:\Program Files\glassfish-4.1.1\javadb
+java.runtime.version=1.8.0_121-b13
+user.dir=C:\Program Files\glassfish-4.1.2\glassfish4\javadb
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
-derby.system.home=C:\Temp\ProjetoLp3Mack\Restaurante\db
+derby.system.home=C:\Users\Bruno\Documents\NetBeansProjects\ProjetoLp3\ProjetoLp3\Restaurante\db
 Carregador de classe do banco de dados iniciado - derby.database.classpath=''
-Thu May 11 09:33:27 BRT 2017 Thread[DRDAConnThread_2,5,main] (XID = 872), (SESSIONID = 0), (DATABASE = restaurante), (DRDAID = {1}), Cleanup action starting
-java.sql.SQLNonTransientConnectionException: Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
+Sat May 20 15:27:27 BRT 2017 Thread[DRDAConnThread_11,5,main] Cleanup action starting
+java.sql.SQLException: Banco de dados 'brconsulta' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserCredentials(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
 	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
@@ -33,12 +33,12 @@ java.sql.SQLNonTransientConnectionException: Ocorreu uma falha de autenticação d
 	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
 	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
-Caused by: java.sql.SQLException: Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
+Caused by: java.sql.SQLException: Banco de dados 'brconsulta' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	... 19 more
 ============= begin nested exception, level (1) ===========
-java.sql.SQLException: Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
+java.sql.SQLException: Banco de dados 'brconsulta' não encontrado.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
@@ -46,7 +46,7 @@ java.sql.SQLException: Ocorreu uma falha de autenticação da conexão.  Motivo: Au
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
-	at org.apache.derby.impl.jdbc.EmbedConnection.checkUserCredentials(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
 	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
 	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
@@ -62,4 +62,4 @@ java.sql.SQLException: Ocorreu uma falha de autenticação da conexão.  Motivo: Au
 	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
 ============= end nested exception, level (1) ===========
 Cleanup action completed
-Thu May 11 09:33:27 BRT 2017 Thread[DRDAConnThread_2,5,main] (DATABASE = restaurante), (DRDAID = {1}), Ocorreu uma falha de autenticação da conexão.  Motivo: Autenticação inválida..
+Sat May 20 15:27:27 BRT 2017 Thread[DRDAConnThread_11,5,main] (DATABASE = brconsulta), (DRDAID = {909}), Banco de dados 'brconsulta' não encontrado.
